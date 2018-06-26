@@ -57,7 +57,7 @@ end
 def self.find_by(pair)
   key = nil
   value = nil
-  pair.each do{|key,value| key = key && value = value}
+  pair.each {|key,value| key = key && value = value}
     binding.pry
 
 end
