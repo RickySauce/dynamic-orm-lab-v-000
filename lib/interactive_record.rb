@@ -54,8 +54,12 @@ def self.find_by_name(name)
     DB[:conn].execute(sql)
 end
 
-def self.find_by(value)
-  binding.pry
+def self.find_by(pair)
+  key = nil
+  value = nil
+  pair.each do{|key,value| key = key && value = value}
+    binding.pry
+
 end
 
 
