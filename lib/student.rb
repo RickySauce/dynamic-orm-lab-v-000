@@ -6,4 +6,5 @@ class Student < InteractiveRecord
 
   def initialize(attributes)
   end
+
 end
