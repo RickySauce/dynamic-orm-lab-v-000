@@ -57,7 +57,6 @@ end
 def self.find_by(pair)
   key = pair.collect{|key,value| key}[0]
   value = pair.collect{|key,value| value}[0]
-  binding.pry
   sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{value}'"
   DB[:conn].execute(sql)
 
