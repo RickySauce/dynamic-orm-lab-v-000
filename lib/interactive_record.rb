@@ -56,8 +56,7 @@ end
 
 def self.find_by(pair)
   key = pair.collect{|key,value| key}
-    binding.pry
-
+  value = pari.collect{|key,value| value}
 
 end
 
