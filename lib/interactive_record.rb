@@ -55,8 +55,10 @@ def self.find_by_name(name)
 end
 
 def self.find_by(pair)
-  key = pair.collect{|key,value| key}
-  value = pari.collect{|key,value| value}
+  key = pair.collect{|key,value| key}[0]
+  value = pari.collect{|key,value| value}[0]
+  sql = "SELECT * FROM #{self.table_name} WHERE #{key} = #{value}"
+  db[:conn].execute(sql)
 
 end
 
